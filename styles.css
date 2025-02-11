@@ -1,0 +1,269 @@
+/* General Styles */  
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5DC; /* Light beige background for a neutral, warm canvas */
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    background-color: #3E2723; /* Dark brown for a grounded, professional header */
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-container img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #FFFFFF; /* White text for contrast with dark brown header */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-left: auto;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    font-weight: bold;
+    color: #F5F5F5; /* Light color for links */
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #9C2C29; /* Burgundy red for hover effect */
+}
+
+/* Landing Section with Background Image */
+.landing-section {
+    background-image: url('background.jpg'); /* Colorful splash background */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 3s ease-out;
+    color: white; /* White text to contrast with a colorful background */
+}
+
+.landing-section .intro-text {
+    z-index: 10;
+    padding: 20px;
+}
+
+.landing-section h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    animation: slideUp 1.5s ease-out;
+}
+
+.landing-section p {
+    font-size: 1.2em;
+    color: #E5E5E5; /* Light grayish color for paragraphs */
+    margin-bottom: 30px;
+    animation: slideUp 1.5s ease-out 0.5s;
+}
+
+.cta-button {
+    background-color: #3E2723; /*  Brown for the button */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    animation: fadeInButton 2s ease-out;
+    margin-top: 80px; /* Added margin to lower the button */
+}
+
+.cta-button:hover {
+    background-color: #7D1A15; /* Darker red on hover */
+}
+
+.landing-logo {
+    width: 100px;
+    height: auto;
+    margin-top: 30px;
+    z-index: 10;
+    animation: fadeInLogo 2s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLogo {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Shop Section */
+.shop-section {
+    background-color: #F1E3C6; /* Soft, warm beige for the section */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.shop-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #3E2723; /* Brown for the heading */
+}
+
+.artworks {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+/* Pop Effect on Click */
+.artwork-item {
+    width: 30%;
+    margin: 20px 0;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.artwork-item:active {
+    transform: scale(1.05); /* Slight pop effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.artwork-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.artwork-item h3 {
+    margin: 15px 0;
+    font-size: 1.6em;
+    color: #3E2723; /* Brown for the artwork title */
+}
+
+.artwork-item p {
+    font-size: 1em;
+    color: #8D7F7F; /* Warm taupe for the description */
+}
+
+/* Wrapper for the "View All Artworks" Button */
+.button-wrapper {
+    margin-top: 40px; /* Adjust this value to move the button down further */
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    background-color: #3E2723; /* Brown for the button */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    animation: fadeInButton 2s ease-out;
+    margin-top: 80px;
+}
+
+.cta-button:hover {
+    background-color: #7D1A15; /* Darker red on hover */
+}
+
+/* About Section */
+.about-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #4E5B31; /* Olive green for the about section */
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #F1E3C6; /* Warm yellow for the heading */
+}
+
+.about-section p {
+    font-size: 1.2em;
+    color: #F1E3C6; /* Warm taupe for paragraph text */
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #3E2723; /* Dark brown footer for grounding */
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1em;
+    color: #F5F5F5; /* Light grayish color for footer text */
+}
+
