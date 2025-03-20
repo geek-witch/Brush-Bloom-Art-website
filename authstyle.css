@@ -1,0 +1,227 @@
+/* Authentication Pages Styling */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+
+body {
+  font-family: "Playfair Display", serif;
+  background-color: #5e7244; /* Deep Green */
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: #3e2a26; /* Rich Brown */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  color: #f5edde; /* Cream */
+  padding: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Heading Styling */
+h2 {
+  color: #f5edde !important; /* Cream */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Form Labels */
+.form-label {
+  font-weight: bold;
+  color: #f5edde; /* Cream */
+}
+
+/* Input Fields */
+.form-control {
+  border-radius: 6px;
+  border: 1px solid #f5edde; /* Cream */
+  background-color: #f5edde; /* Cream */
+  color: #3e2a26; /* Brown */
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #5e7244; /* Green */
+  box-shadow: 0 0 8px rgba(94, 114, 68, 0.6);
+  background-color: #fff;
+  transform: scale(1.02);
+}
+
+/* Buttons */
+.btn {
+  background-color: #5e7244; /* Green */
+  color: #f5edde; /* Cream */
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #3e2a26; /* Dark Brown */
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Forgot Password & Signup Links */
+.text-danger {
+  color: #f5edde !important; /* Cream */
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.text-danger:hover {
+  color: #e1c699 !important; /* Warm Gold */
+  text-shadow: 0 0 5px rgba(225, 198, 153, 0.8);
+}
+
+/* Checkbox Styling */
+.form-check-input {
+  background-color: #f5edde;
+  border: 1px solid #5e7244;
+}
+
+.form-check-input:checked {
+  background-color: #5e7244;
+  border-color: #3e2a26;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 576px) {
+  .container {
+    padding: 20px;
+  }
+  .card {
+    padding: 20px;
+  }
+}
+
+/* NEW STYLES FOR PASSWORD RESET CARDS */
+
+/* Card Animation and Transitions */
+#login-card,
+#forgot-password-card,
+#reset-password-card {
+  animation: fadeIn 0.5s ease-in-out;
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card Description Text */
+.text-muted {
+  color: #e1c699 !important; /* Warm Gold */
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+/* Alert/Message Styling */
+.alert {
+  border-radius: 6px;
+  padding: 12px 15px;
+  margin-top: 15px;
+  font-weight: 500;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.alert-success {
+  background-color: rgba(94, 114, 68, 0.8); /* Green with opacity */
+  color: #f5edde; /* Cream */
+  border-left: 4px solid #5e7244;
+}
+
+.alert-danger {
+  background-color: rgba(169, 68, 66, 0.8); /* Reddish with opacity */
+  color: #f5edde; /* Cream */
+  border-left: 4px solid #a94442;
+}
+
+.alert-info {
+  background-color: rgba(225, 198, 153, 0.8); /* Warm Gold with opacity */
+  color: #3e2a26; /* Brown */
+  border-left: 4px solid #e1c699;
+}
+
+/* Secondary Button Styling */
+.btn-outline-secondary {
+  background-color: transparent;
+  border: 2px solid #f5edde; /* Cream */
+  color: #f5edde; /* Cream */
+}
+
+.btn-outline-secondary:hover {
+  background-color: #f5edde; /* Cream */
+  color: #3e2a26; /* Brown */
+  border-color: #f5edde;
+}
+
+/* Form Spacing */
+#forgot-password-form,
+#reset-password-form {
+  margin-top: 10px;
+}
+
+/* Password Strength Indicator (Optional) */
+.password-strength {
+  height: 5px;
+  margin-top: 5px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.strength-weak {
+  background-color: #a94442; /* Red */
+  width: 30%;
+}
+
+.strength-medium {
+  background-color: #e1c699; /* Warm Gold */
+  width: 60%;
+}
+
+.strength-strong {
+  background-color: #5e7244; /* Green */
+  width: 100%;
+}
+
+/* Card Title Decoration */
+h2:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #e1c699; /* Warm Gold */
+  margin: 10px auto 20px;
+}
+
+/* Input Focus Animation */
+.form-control:focus::placeholder {
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+}
+
+/* Button Group Spacing */
+.btn + .btn {
+  margin-top: 10px;
+}
+
