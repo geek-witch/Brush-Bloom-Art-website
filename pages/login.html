@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Brush and Bloom</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap">
+    <script src="../js/main.js" defer></script>
+    <script src="../js/pages/login.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1>Brush<span>&</span>Bloom</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="product.html">Artwork</a></li>
+                    <li><a href="artist.html">Artists</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="login.html" class="login-icon" aria-label="Login">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9 9 0 1118.879 6.196M12 12v9m0-9a3 3 0 100-6 3 3 0 000 6z" />
+                    </svg>
+                </a>
+                <a href="cart.html" class="cart-icon" aria-label="Cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <br>
+    <main>
+        <section class="auth-section">
+            <div class="container">
+                <div class="auth-container">
+                    <div class="auth-tabs">
+                        <button class="auth-tab active" data-tab="login">Login</button>
+                        <button class="auth-tab" data-tab="register">Register</button>
+                    </div>
+                    
+                    <div class="auth-content">
+                        <!-- Login Form -->
+                        <div class="auth-form active" id="login-form">
+                            <h2>Welcome Back</h2>
+                            <p>Sign in to your account to access your profile, orders, and favorites.</p>
+                            
+                            <form>
+                                <div class="form-group">
+                                    <label for="login-email">Email Address</label>
+                                    <input type="email" id="login-email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="login-password">Password</label>
+                                    <div class="password-wrapper">
+                                        <input type="password" id="login-password" name="password" required>
+                                        <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-.274.857-.682 1.662-1.208 2.385M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="form-group checkbox">
+                                    <input type="checkbox" id="remember-me" name="remember">
+                                    <label for="remember-me">Remember me</label>
+                                </div>
+                                <div class="forgot-password">
+                                    <a href="#" id="forgot-password-link">Forgot your password?</a>
+                                </div>
+                                <button type="submit" class="btn-primary">Sign In</button>
+                            </form>
+                        </div>
+                        
+                        <!-- Register Form -->
+                        <div class="auth-form" id="register-form">
+                            <h2>Create an Account</h2>
+                            <p>Join our community to track orders, save favorites, and get personalized recommendations.</p>
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="register-first-name">First Name</label>
+                                        <input type="text" id="register-first-name" name="firstName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="register-last-name">Last Name</label>
+                                        <input type="text" id="register-last-name" name="lastName" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="register-email">Email Address</label>
+                                    <input type="email" id="register-email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="register-password">Password</label>
+                                    <div class="password-wrapper">
+                                        <input type="password" id="register-password" name="password" required>
+                                        <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-.274.857-.682 1.662-1.208 2.385M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="register-confirm-password">Confirm Password</label>
+                                    <div class="password-wrapper">
+                                        <input type="password" id="register-confirm-password" name="confirmPassword" required>
+                                        <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-.274.857-.682 1.662-1.208 2.385M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="form-group checkbox">
+                                    <input type="checkbox" id="terms-agree" name="terms" required>
+                                    <label for="terms-agree">I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
+                                </div>
+                                <button type="submit" class="btn-primary">Create Account</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Forgot Password Modal -->
+    <div class="forgot-password-modal" id="forgot-password-modal">
+        <h2>Reset Password</h2>
+        <p>Enter your email address to receive a password reset link.</p>
+        <form id="forgot-password-form">
+            <div class="form-group">
+                <label for="reset-email">Email Address</label>
+                <input type="email" id="reset-email" name="email" required>
+            </div>
+            <button type="submit" class="btn-primary">Send Reset Link</button>
+        </form>
+        <button class="btn-secondary" id="close-modal">Close</button>
+    </div>
+    <div class="modal-overlay" id="modal-overlay"></div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2023 Brush and Bloom. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

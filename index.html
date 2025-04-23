@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brush and Bloom | Discover Unique Artwork</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap">
+    <script src="js/main.js" defer></script>
+    <script src="js/pages/home.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Brush<span>&</span>Bloom</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="pages/product.html">Artwork</a></li>
+                    <li><a href="pages/artist.html">Artists</a></li>
+                    <li><a href="pages/blog.html">Blog</a></li>
+                   
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="pages/login.html" class="login-icon" aria-label="Login">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9 9 0 1118.879 6.196M12 12v9m0-9a3 3 0 100-6 3 3 0 000 6z" />
+                    </svg>
+                </a>
+                <a href="pages/cart.html" class="cart-icon" aria-label="Cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <br>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Discover Art That Speaks to Your Soul</h2>
+                    <p>Curated collection of unique artworks from talented artists around the world</p>
+                    <div class="hero-buttons">
+                        <a href="pages/product.html" class="btn-primary">Explore Artwork</a>
+                        <a href="pages/artist.html" class="btn-secondary">Meet Artists</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/hero-artwork.jpg" alt="Featured artwork collage">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Artwork Section -->
+        <section class="featured-artwork">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Artwork</h2>
+                    <a href="pages/product.html" class="view-all">View All</a>
+                </div>
+                <div class="artwork-grid" id="featured-artwork-container">
+                    <!-- Art cards will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Artists Section -->
+        <section class="featured-artists">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Artists</h2>
+                    <a href="pages/artist.html" class="view-all">View All</a>
+                </div>
+                <div class="artists-grid" id="featured-artists-container">
+                    <!-- Artist cards will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Art Categories Section -->
+        <section class="art-categories">
+            <div class="container">
+                <h2>Browse by Category</h2>
+                <div class="categories-grid">
+                    <a href="pages/product.html?category=painting" class="category-card">
+                        <div class="category-image">
+                            <img src="assets/images/category-painting.jpg" alt="Paintings">
+                        </div>
+                        <h3>Paintings</h3>
+                    </a>
+                    <a href="pages/product.html?category=sculpture" class="category-card">
+                        <div class="category-image">
+                            <img src="assets/images/category-sculpture.jpg" alt="Sculptures">
+                        </div>
+                        <h3>Sculptures</h3>
+                    </a>
+                    <a href="pages/product.html?category=digital" class="category-card">
+                        <div class="category-image">
+                            <img src="assets/images/category-digital.jpg" alt="Digital Art">
+                        </div>
+                        <h3>Digital Art</h3>
+                    </a>
+                    <a href="pages/product.html?category=photography" class="category-card">
+                        <div class="category-image">
+                            <img src="assets/images/category-photography.jpg" alt="Photography">
+                        </div>
+                        <h3>Photography</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Stay Inspired</h2>
+                    <p>Subscribe to our newsletter for art inspiration, exclusive offers, and artist spotlights.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Preview Section -->
+        <section class="blog-preview">
+            <div class="container">
+                <div class="section-header">
+                    <h2>From Our Blog</h2>
+                    <a href="pages/blog.html" class="view-all">View All</a>
+                </div>
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="assets/images/blog-1.jpg" alt="Art collecting tips">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date">June 15, 2023</span>
+                            <h3>The Art of Collecting: Tips for New Collectors</h3>
+                            <p>Discover essential tips for starting your art collection journey...</p>
+                            <a href="pages/blog.html" class="read-more">Explore</a>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="assets/images/blog-2.jpg" alt="Artist interview">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date">June 8, 2023</span>
+                            <h3>Artist Spotlight: Interview with Emma Chen</h3>
+                            <p>We sat down with emerging artist Emma Chen to discuss her creative process...</p>
+                            <a href="pages/blog.html" class="read-more">Explore</a>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="assets/images/blog-3.jpg" alt="Art trends">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date">May 30, 2023</span>
+                            <h3>Emerging Art Trends to Watch in 2023</h3>
+                            <p>Explore the cutting-edge trends shaping the art world this year...</p>
+                            <a href="pages/blog.html" class="read-more">Explore</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Brush<span>&</span>Bloom</h2>
+                    <p>Connecting art lovers with unique creations since 2020</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Explore</h3>
+                        <ul>
+                            <li><a href="pages/product.html">Artwork</a></li>
+                            <li><a href="pages/artist.html">Artists</a></li>
+                            <li><a href="pages/blog.html">Blog</a></li>
+                            <li><a href="pages/aboutus.html">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Customer Service</h3>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Shipping & Returns</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Connect</h3>
+                        <ul class="social-links">
+                            <li><a href="#" aria-label="Instagram">Instagram</a></li>
+                            <li><a href="#" aria-label="Facebook">Facebook</a></li>
+                            <li><a href="#" aria-label="Pinterest">Pinterest</a></li>
+                            <li><a href="#" aria-label="Twitter">Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Brush and Bloom. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

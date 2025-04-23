@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Brush & Bloom</title>
+  <style>
+    :root {
+      --primary-color: #7C6A64;
+      --secondary-color: #A26769;
+      --accent-color: #4A4E69;
+      --text-color: #3B3B3B;
+      --light-text: #490707;
+      --background-color: #F6F1EB;
+      --light-background: #E3DCC9;
+      --border-color: #C9A66B;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+
+    header {
+      background-color: var(--primary-color);
+      padding: 20px;
+      text-align: center;
+      color: var(--light-text);
+      box-shadow: var(--shadow);
+    }
+
+    .banner {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: var(--light-background);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    h1 {
+      color: var(--accent-color);
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      color: var(--secondary-color);
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: var(--accent-color);
+      color: var(--light-text);
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Brush & Bloom</h2>
+    <p>Where Creativity Connects</p>
+  </header>
+
+  <!-- Image Banner -->
+  <img class="banner" src="../assets/images/banner.jpg" alt="Art Banner"><br><br>
+
+  <main>
+    <h1>About Us</h1>
+    <p>
+      Welcome to <span class="highlight">Brush & Bloom</span> — a vibrant space for artists, collectors, and
+      enthusiasts to come together and celebrate creativity. Our platform is built with a passion for expression
+      and a mission to <span class="highlight">connect people through art</span>.
+    </p>
+    <p>
+      Whether you're here to showcase your latest masterpiece, discover unique art for your collection,
+      or simply explore the talent of a global community, <span class="highlight">Brush & Bloom</span> makes it easy and inspiring.
+    </p>
+    <p>
+      We believe that art is a universal language, and through this platform, we aim to nurture a supportive
+      and inclusive environment where creativity can thrive and connections can flourish.
+    </p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Brush & Bloom. All rights reserved.</p>
+  </footer>
+
+  <script>
+    console.log("Welcome to Brush & Bloom's About Us page.");
+  </script>
+</body>
+</html>

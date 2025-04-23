@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout | Brush & Bloom</title>
+  <style>
+    :root {
+      --primary-color: #7C6A64;
+      --secondary-color: #A26769;
+      --accent-color: #4A4E69;
+      --text-color: #3B3B3B;
+      --light-text: #490707;
+      --background-color: #F6F1EB;
+      --light-background: #E3DCC9;
+      --border-color: #C9A66B;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+
+    header {
+      background-color: var(--primary-color);
+      padding: 20px;
+      text-align: center;
+      color: var(--light-text);
+      box-shadow: var(--shadow);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: var(--light-background);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--accent-color);
+    }
+
+    form {
+      display: grid;
+      gap: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      color: var(--accent-color);
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      background-color: #fff;
+      transition: var(--transition);
+    }
+
+    input:focus {
+      border-color: var(--secondary-color);
+      outline: none;
+    }
+
+    .btn {
+      background-color: var(--secondary-color);
+      color: var(--light-text);
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: var(--transition);
+    }
+
+    .btn:hover {
+      background-color: var(--accent-color);
+    }
+
+    footer {
+      background-color: var(--accent-color);
+      color: var(--light-text);
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Brush & Bloom</h2>
+    <p>Secure Checkout</p>
+  </header>
+
+  <div class="container">
+    <h1>Checkout</h1>
+    <form>
+      <div>
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="Jane Doe" required />
+      </div>
+      <div>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="jane@example.com" required />
+      </div>
+      <div>
+        <label for="address">Shipping Address</label>
+        <input type="text" id="address" placeholder="123 Art Lane, Creativity City" required />
+      </div>
+      <div>
+        <label for="city">City</label>
+        <input type="text" id="city" required />
+      </div>
+      <div>
+        <label for="zip">ZIP / Postal Code</label>
+        <input type="text" id="zip" required />
+      </div>
+      <div>
+        <label for="card">Card Number</label>
+        <input type="text" id="card" placeholder="1234 5678 9012 3456" required />
+      </div>
+      <div>
+        <label for="expiry">Expiry Date</label>
+        <input type="text" id="expiry" placeholder="MM/YY" required />
+      </div>
+      <div>
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" placeholder="123" required />
+      </div>
+      <button type="submit" class="btn">Place Order</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Brush & Bloom. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelector("form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Thank you for your order! Your art will bloom soon.");
+    });
+  </script>
+</body>
+</html>
