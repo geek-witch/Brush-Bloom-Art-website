@@ -1,0 +1,161 @@
+/* Color Variables */
+:root {
+    --primary-color: #7C6A64; /* Warm Taupe */
+    --secondary-color: #A26769; /* Vintage Rose */
+    --accent-color: #4A4E69; /* Dusty Indigo */
+    --text-color: #3B3B3B; /* Warm Charcoal for Readability */
+    --light-text: #FFFFFF; /* White for Text on Buttons/Dark Backgrounds */
+    --background-color: #F6F1EB; /* Parchment Cream */
+    --light-background: #E3DCC9; /* Soft Beige for Section Backgrounds/Cards */
+    --border-color: #C9A66B; /* Muted Gold for Details/Trim */
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Shadow */
+    --transition: all 0.3s ease; /* Transition */
+}
+html, body {
+    overflow-x: hidden;
+}
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Contact Page Styling */
+.contact-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--light-background);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.contact-header p {
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+.contact-info h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    color: var(--text-color);
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: var(--light-background);
+    color: var(--text-color);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Footer Styling */
+.site-footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    font-size: 14px;
+    border-top: 2px solid var(--border-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .contact-info {
+        padding: 15px;
+    }
+}
